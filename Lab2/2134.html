@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<head>
+  <script src="skrypt.js">
+  </script>
+  <meta charset="utf-8">
+  <title> Dobry dzień </title>
+  <meta name="Autor" content="Paweł Jagusztyn">
+</head>
+<body onload="startclock()">
+  <header id ="DOM">
+    <nav id="nav-bar">
+      <div id="left">
+        <h1>Dobry dzień</h1>
+      </div>
+      <div id="right">
+        <ul>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link2</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="id1">
+      <img id="zdjecie" src="https://i.kym-cdn.com/photos/images/original/001/182/912/02f.jpg" alt "Pepo mądry">
+    </section>
+    <section id="id2">
+      <table>
+        <tr>
+          <td>Pierwsza komórka pierwszego wiersza (pierwsza komórka tabeli)</td>
+          <td>Druga komórka pierwszego wiersza (druga komórka tabeli)</td>
+        </tr>
+        <tr>
+          <td>Pierwsza komórka drugiego wiersza (trzecia komórka tabeli)</td>
+          <td>Druga komórka drugiego wiersza (czwarta komórka tabeli)</td>
+        </tr>
+      </table>
+    </section>
+    <section id="id3">
+      <ol id="Nowalista">
+        <li>cos</li>
+        <li>cos</li>
+      </ol>
+      <button onclick="appendLiChild()">Dodaj </button>
+    </section>
+    <section id="id4">
+      <form id="clock" name="clock" onSubmit="0">
+        <input type="text" name="face" size="24">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <span>Projektowanie Serwisów WWW - <b>Paweł Jagusztyn</b></span>
+  </footer>
+</body>
+</html>
