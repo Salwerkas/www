@@ -17,5 +17,4 @@ while ($row = mysqli_fetch_array($result)) {
     }
 mysqli_free_result($result);
 mysqli_close($link);
-
 ?>
