@@ -97,9 +97,21 @@
         <label for="exampleInputAge1">Age</label>
         <input type="age" class="form-control" id="exampleInputAge1" placeholder="Age" name="Wiek">
       </div>
-      <button formaction="baza/connectiontoDB.php" type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group">
+        <label for="exampleInputID1">ID - wypełnij tylko dla update'a</label>
+        <input type="id" class="form-control" id="exampleInputID1" placeholder="id" name="ID">
+      </div>
+      <button formaction="baza/connectiontoDB.php" type="submit" class="btn btn-primary">Insert</button>
+      <button formaction="baza/connectiontoDB2.php" type="submit" class="btn btn-primary">Update</button>
     </form>
   </main>
+  <form action="baza/connectiontoDB3.php" method="POST">
+    <div class="form-group">
+      <label for="exampleInputIdDel1">ID</label>
+      <input type="id" class="form-control" id="exampleInputIdDel1" aria-describedby="emailHelp" placeholder="ID" name="Iddel">
+    </div>
+          <button formaction="baza/connectiontoDB3.php" type="submit" class="btn btn-primary">Delete</button>
+  </form>
   <div class="row">
     <div class="col-4">
     </div>
