@@ -9,7 +9,7 @@ $result = mysqli_query($link, $query)
     or die("Error");
 while ($row = mysqli_fetch_array($result)) {
     echo
-  "\n<b><TR>Wiek:&nbsp&nbsp". $row["Wiek"]."</b><br/>".
+  "<b><TR>Wiek:&nbsp&nbsp". $row["Wiek"]."</b><br/>".
   "<b><TR>name:&nbsp&nbsp". $row["Imie"]."</b><br/>".
     "<b><TR>surname:&nbsp&nbsp". $row["Nazwisko"]."</b><br/>".
     "<b><TR>Id:&nbsp&nbsp". $row["ID"]."</b><br/>".
