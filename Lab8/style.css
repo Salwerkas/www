@@ -1,0 +1,60 @@
+h1{
+  font-family: Mali,black;
+  font-size: 50px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+nav#nav-bar{
+  width: 100%;
+  height: 180px;
+}
+nav #left{
+  float: left;
+  padding: 20px;
+  width: 40%;
+}
+nav #right{
+  float: right;
+  padding: 20px;
+  width: 50%;
+}
+nav h1{
+  padding: 0px;
+  margin: 0px;
+}
+nav ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  padding: 20px;
+}
+nav li a{
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+}
+section{
+  padding: 100px;
+}
+#clock{
+  text-align: right;
+}
+section#id1{
+  text-align: center;
+}
+#zdjecie{
+}
+table, td
+{
+  border-collapse:collapse;
+  border:1px solid white;
+  padding:5px; margin: auto;
+}
+section#id2{
+  text-align: center;
+}

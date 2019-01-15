@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet" type="text/css">
+<div class="p-3 mb-2 bg-dark text-white">
+  <head>
+    <script src="skrypt.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title> Dobry dzień </title>
+    <meta name="Autor" content="Paweł Jagusztyn">
+  </head>
+  <body onload="startclock()">
+    <div class="row align-items-start">
+      <div class="col-12 col-md-8">
+        <h1>Dobry dzień</h1>
+      </div>
+      <div id="demo" class="col-6 col-md-4">
+        <h1>Probny Ajax</h1>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+      </div>
+      <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+          }
+        };
+        xhttp.open("GET", "zadzialaj.txt", true);
+        xhttp.send();
+      }
+      </script>
+    </div>
+    <main>
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6">
+          <img id="zdjecie" src="https://i.kym-cdn.com/photos/images/original/001/182/912/02f.jpg" class="img-fluid" alt "Pepo mądry">
+        </div>
+        <div class="col">
+        </div>
+      </div>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Second</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Pierwsza komórka pierwszego wiersza (pierwsza komórka tabeli)</td>
+            <td>Druga komórka pierwszego wiersza (druga komórka tabeli)</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Pierwsza komórka drugiego wiersza (trzecia komórka tabeli)</td>
+            <td>Druga komórka drugiego wiersza (czwarta komórka tabeli)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+        </div>
+        <div class="col-2">
+          <form id="clock" name="clock" onSubmit="0">
+            <input type="text" name="face" size="24">
+          </form>
+        </div>
+      </div>
+      <form action="baza/connectiontoDB.php" method="post">
+        <div class="form-group">
+          <label for="exampleInputName1">Name</label>
+          <input type="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Name" name="Imie">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSurname1">Surname</label>
+          <input type="surname" class="form-control" id="exampleInputSurname1" placeholder="Surname" name="Nazwisko">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputAge1">Age</label>
+          <input type="age" class="form-control" id="exampleInputAge1" placeholder="Age" name="Wiek">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputID1">ID - wypełnij tylko dla update'a</label>
+          <input type="id" class="form-control" id="exampleInputID1" placeholder="id" name="ID">
+        </div>
+        <button formaction="baza/connectiontoDB.php" type="submit" class="btn btn-primary">Insert</button>
+        <button formaction="baza/connectiontoDB2.php" type="submit" class="btn btn-primary">Update</button>
+      </form>
+      <form action="baza/connectiontoDB3.php" method="POST">
+        <div class="form-group">
+          <label for="exampleInputIdDel1">ID</label>
+          <input type="id" class="form-control" id="exampleInputIdDel1" aria-describedby="emailHelp" placeholder="ID" name="Iddel">
+        </div>
+        <button formaction="baza/connectiontoDB3.php" type="submit" class="btn btn-primary">Delete</button>
+      </form>
+      <form action="baza/login.php" method="post">
+        <div class="form-group">
+          <label for="exampleInputLogin">Login</label>
+          <input type="text" class="form-control" id="exampleInputLogin" placeholder="Enter your username" name="Login" required>
+          <input type="password" class="form-control" id="exampleInputLogin1" placeholder="Enter your password" name="Password" required>
+        </div>
+        <button formaction="baza/login.php" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <form action="baza/logout.php">
+        <div class="form-group">
+        </div>
+        <button formaction="baza/logout.php" type="submit" class="btn btn-primary">Logout</button>
+      </form>
+    </main>
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-md-auto">
+        <span>Projektowanie Serwisów WWW - <b>Paweł Jagusztyn</b></span>
+      </div>
+      <div class="col-4">
+      </div>
+    </div>
+  </body>
+</div>
+</html>
